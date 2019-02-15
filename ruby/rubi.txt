@@ -1,0 +1,96 @@
+Ruby es un lenguaje de programacion derivado de la combinacion de lenguajes como perl, adi, lisp, eiffel, smaltalk 
+orientado a objetos se maneja con programacion imperativa y funcional, la declaracion de sus variables es asi: 
+var(variable local) 
+@var(variable de instancia) 
+$var(variable global)  
+y en ruby las librerias se llaman gemasy utiliza multiples frameworks para desarrollar apps web. :)
+
+Modulo: como reunir un conjunto de funciones con un mismo fin. 
+ 
+Hola + 2 = Error. 
+Hola + 2.to_s = Hola2 
+2.to_i + 3 = 5 
+.to_s = string conversion 
+.to_i = integer conversion 
+.to_f = float conversion 
+para inyectar codigo usar siempre "", asi: 
+nomb "amigos" 
+puts "Hola #{nomb}" 
+por lo tanto= Hola amigos (tambien aplica para operaciones matematicas) 
+
+Metodo: 
+- Coleccion de sentencias y expresiones de programacion 
+- Evita la repeticion del codigo 
+- Se pueden usar muchas veces 
+
+definicion de metodos: 
+def nombre_del_metodo argumentos 
+ # sentencias  
+no olvides mandar a llamar el metodo(def) 
+
+Arreglos (video 8) 
+Metodos en arreglos: 
+include, map(map!), map&;even?, reduce, select, reject, drop_while, delete_if, 
+keep_if, any?, &(interseccion), *(por un entero y por un string), Suma y resta, 
+collect, each_with_index, flatten!, all?
+
+Estructuras repetitivas: 
+las utilizamos para iterar sobre un arreglo para obtener cierto tipo de informacion o manejar 
+de alguna forma los datos que tenemos guardados.
+
+Existen 3 métodos con los cuales podemos iterar sobre un arreglo:
+
+- Método each: Vamos a invocar este método para poder ver cada uno de los elementos e ir asignando 
+el valor que corresponde a cada espacio del arreglo.
+- Método for: Hace la misma función que each.
+- Método while: Nos ayuda a determinar el tamaño total de nuestro arreglo. 
+
+end 
+
+include: Busca dentro del arreglo si existe o no el elemento que le preguntemos.
+map (map!): Funciona como each, pero adicional se puede editar o sobre escribir el valor de nuestro arreglo. Para que los cambios en el arreglo permanezcan, escribimos un signo de exclamación después del método.
+map &:even?: Even funciona en Ruby para indicarnos si el número es par o es impar. Al utilizarlo en el método map, nos va a ayudar a saber el estado de cada uno de los elementos que componen el arreglo.
+reduce
+select: Realiza una consulta entre cada uno de los elementos del arreglo y selecciona según la indicación que le demos.
+reject: Rechaza a todos los elementos del arreglo según la indicación que le demos.
+drop_while: Funciona como el método reject.
+delete_if: Este método también funciona similar al reject. 
+keep_if: Funciona similar al método select.
+any?: Nos ayuda a saber si alguno de los elementos del arreglo cumple con la condición que le establezcamos.
+all?: Nos ayuda a saber si todos los elementos del arreglo cumplen con la condición que le establezcamos.
+& (intersección): Nos ayuda a crear una intersección diciéndonos qué elementos tenemos en común entre diferentes arreglos.
+asterisco (*) (por un entero y por un string): Nos ayuda a multiplicar los elementos del arreglo por el valor que le indiquemos.
+suma y resta
+collect: Es un alias del método map
+each_with_index: Nos va a devolver primero el valor y luego el index que estemos llamando.
+flatten!: Nos permite tener un arreglo simple.
+
+bloques: considerados funciones sin nombre, van entre llaves o entre do.. end y dependen de un metodo asociado para funcionar 
+Procs y lambdas: 
+Son metodos sin nombre que se pueden asignar a una variable, para ser ejecutados deben ser llamados por .call 
+los procs se usan mas 
+
+El manejo de excepciones nos sirve para control de errores que ruby arroja por defecto cuando se ejecuta un codigo 
+begin, end: Para definir un bloque.
+rescue: Para controlar una excepción.
+else: Código que se ejecuta si no hubo excepciones.
+ensure: Para forzar que se ejecute código si se lanza o no una excepción.
+raise o fail: Para lanzar una excepción. 
+
+Objeto: valor con atributos adicionales y comportamiento, los objetos colaboran con otros objetos 
+clase: Contiene propiedades tales como metodos y variables, pueden heredar propiedades, permite herencia simple 
+Scope de variables: alcance que puede tener una variable 
+
+Encapsulamiento: 
+Exponer el comportamiento externo de la clase mediante metodos, proteger los datos internos 
+Accessors: 
+
+Herencia:Reutilizar codigo, una clase(hija) extiende el comportamiento de otra clase(padre) 
+
+Mixins: Mezcla entre modulos y clases, es una clase que implementa un modulo, se puede crear mediante: Metodo include y Metodo extend 
+
+Testing: Consiste en un programa externo que se puede crear con la finalidad de probar nuestro codigo, para los testing se usa la gema(libreria) RSpec 
+
+gems installed: fibonacci, rspec, nokogiri, rack, httparty(que hacen estas gemas)  
+
+las excepciones, el gets, para eliminar arreglos que pense que era el delete
